@@ -155,3 +155,13 @@ document.querySelectorAll('.slideshow').forEach((show) => {
     if (count) count.textContent = `${i + 1} / ${slides.length}`;
   }, +show.dataset.interval || 500);
 });
+
+// Carousels: arrows scroll the track by one slide
+document.querySelectorAll('.carousel').forEach((c) => {
+  const track = c.querySelector('.carousel-track');
+  c.querySelectorAll('.carousel-btn').forEach((b) => b.addEventListener('click', () => {
+    const slide = track.firstElementChild;
+    const step = slide ? slide.getBoundingClientRect().width + parseFloat(getComputedStyle(track).columnGap || 0) : 300;
+    track.scrollBy({ left: step * +b.dataset.dir, behavior: 'smooth' });
+  }));
+});
