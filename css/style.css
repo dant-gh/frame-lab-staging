@@ -1118,8 +1118,6 @@ body.lb-lock { overflow: hidden; }
 #moti-canvas { display: block; width: min(460px, 100%); aspect-ratio: 1; cursor: pointer; }
 .moti-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
 .moti-btn { background: #fff; color: var(--text); cursor: pointer; font-family: inherit; }
-.under-map { display: grid; gap: clamp(12px, 2vw, 24px); margin-top: clamp(12px, 2vw, 24px); }
-.map-pair { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1fr); gap: clamp(12px, 2vw, 24px); align-items: start; }
 .map-frame { outline: 1px solid var(--line); outline-offset: -1px; }
 .map-link { display: block; }
 .web-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(12px, 2vw, 24px); }
@@ -1132,4 +1130,4 @@ body.lb-lock { overflow: hidden; }
 .carousel-btn:hover { background: var(--red); color: #fff; }
 .carousel-track { display: flex; gap: clamp(10px, 1.4vw, 18px); overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 10px; scrollbar-width: thin; }
 .carousel-track img { flex: none; width: clamp(200px, 23vw, 300px); height: auto; border-radius: var(--radius); scroll-snap-align: start; }
-@media (max-width: 720px) { .ui-row { grid-template-columns: 1fr; padding: 20px 40px; } .ui-row figure:nth-child(2) { margin-top: 0 !important; } .map-pair, .web-pair { grid-template-columns: 1fr; } }
+@media (max-width: 720px) { .ui-row { grid-template-columns: 1fr; padding: 20px 40px; } .ui-row figure:nth-child(2) { margin-top: 0 !important; } .web-pair { grid-template-columns: 1fr; } }
