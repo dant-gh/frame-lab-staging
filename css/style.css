@@ -1130,8 +1130,10 @@ body.lb-lock { overflow: hidden; }
 .carousel-btn:hover { background: var(--red); color: #fff; }
 .carousel-track { display: flex; gap: clamp(10px, 1.4vw, 18px); overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 10px; scrollbar-width: thin; }
 .carousel-track img { flex: none; width: clamp(200px, 23vw, 300px); height: auto; border-radius: var(--radius); scroll-snap-align: start; }
-@media (max-width: 720px) { .ui-row { grid-template-columns: 1fr; padding: 20px 40px; } .ui-row figure:nth-child(2) { margin-top: 0 !important; } .web-pair { grid-template-columns: 1fr; } }
-
-/* MotaMeet app: logo project preview (square animation next to the 16:9 variations, equal heights) */
-.logo-preview { display: grid; grid-template-columns: minmax(0, .5625fr) minmax(0, 1fr); gap: clamp(12px, 2vw, 24px); align-items: start; }
-@media (max-width: 720px) { .logo-preview { grid-template-columns: 1fr; } }
+@media (max-width: 720px) {
+  /* the three screens stay side by side and swipe sideways */
+  .ui-row { display: flex; gap: 16px; padding: 24px 20px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: 20px; overscroll-behavior-x: contain; scrollbar-width: none; }
+  .ui-row::-webkit-scrollbar { display: none; }
+  .ui-row figure { flex: 0 0 51%; scroll-snap-align: center; }
+  .ui-row figure:nth-child(2) { margin-top: 0 !important; }
+  .web-pair { grid-template-columns: 1fr; } }
